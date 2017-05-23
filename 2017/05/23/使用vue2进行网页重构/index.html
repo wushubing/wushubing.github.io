@@ -72,7 +72,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="一切的开始," />
+  <meta name="keywords" content="EZLippi" />
 
 
 
@@ -88,19 +88,18 @@
 
 
 
-<meta name="description" content="为什么建博客？ 两周前加入东方IC，成为了公司上海分部的前端工程师，我很高兴能拿到这份offer，因为这是公司对我自我价值的认同，我希望我能胜任，所以我打算记录下这个过程。  博客主要功能？ 我想主要用来记录工作中出现的技术问题，或者个人心得体会。  就这样祝好!">
-<meta name="keywords" content="一切的开始">
+<meta name="description" content="网站重构的理由 一个站点随着时间的增加会出现代码冗余逻辑混乱的现象导致维护困难，或者随着前端技术更迭原代码已经不能够实现需求，这种情况下会寻求页面重构。我司主站建站于2005年，在这一行应当算历史悠久了，重构势在必行。  技术选型 根据公司业务、网站功能类别来考虑重构的网站架构技术选型，其实我对这些也是一知半解，仅仅知道有这么个东西。我司的重构我们决定使用vue来进行重构，原因很简单，我虽然学习过">
 <meta property="og:type" content="article">
-<meta property="og:title" content="写在前面">
-<meta property="og:url" content="http://www.wushubing.top/2017/05/23/术/index.html">
+<meta property="og:title" content="使用vue2进行网页重构">
+<meta property="og:url" content="http://www.wushubing.top/2017/05/23/使用vue2进行网页重构/index.html">
 <meta property="og:site_name" content="大术的博客">
-<meta property="og:description" content="为什么建博客？ 两周前加入东方IC，成为了公司上海分部的前端工程师，我很高兴能拿到这份offer，因为这是公司对我自我价值的认同，我希望我能胜任，所以我打算记录下这个过程。  博客主要功能？ 我想主要用来记录工作中出现的技术问题，或者个人心得体会。  就这样祝好!">
-<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1495531569009&di=7dfefbdadfa16b388888903ea952b707&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F17%2F47%2F78%2F55658PICN8u_1024.jpg">
-<meta property="og:updated_time" content="2017-05-23T06:39:02.946Z">
+<meta property="og:description" content="网站重构的理由 一个站点随着时间的增加会出现代码冗余逻辑混乱的现象导致维护困难，或者随着前端技术更迭原代码已经不能够实现需求，这种情况下会寻求页面重构。我司主站建站于2005年，在这一行应当算历史悠久了，重构势在必行。  技术选型 根据公司业务、网站功能类别来考虑重构的网站架构技术选型，其实我对这些也是一知半解，仅仅知道有这么个东西。我司的重构我们决定使用vue来进行重构，原因很简单，我虽然学习过">
+<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1495531569006&di=596ca0c34c885a754c86c55fccd0ac1f&imgtype=0&src=http%3A%2F%2Fimg06.tooopen.com%2Fimages%2F20161212%2Ftooopen_sy_190366895495.jpg">
+<meta property="og:updated_time" content="2017-05-23T08:49:27.102Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="写在前面">
-<meta name="twitter:description" content="为什么建博客？ 两周前加入东方IC，成为了公司上海分部的前端工程师，我很高兴能拿到这份offer，因为这是公司对我自我价值的认同，我希望我能胜任，所以我打算记录下这个过程。  博客主要功能？ 我想主要用来记录工作中出现的技术问题，或者个人心得体会。  就这样祝好!">
-<meta name="twitter:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1495531569009&di=7dfefbdadfa16b388888903ea952b707&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F17%2F47%2F78%2F55658PICN8u_1024.jpg">
+<meta name="twitter:title" content="使用vue2进行网页重构">
+<meta name="twitter:description" content="网站重构的理由 一个站点随着时间的增加会出现代码冗余逻辑混乱的现象导致维护困难，或者随着前端技术更迭原代码已经不能够实现需求，这种情况下会寻求页面重构。我司主站建站于2005年，在这一行应当算历史悠久了，重构势在必行。  技术选型 根据公司业务、网站功能类别来考虑重构的网站架构技术选型，其实我对这些也是一知半解，仅仅知道有这么个东西。我司的重构我们决定使用vue来进行重构，原因很简单，我虽然学习过">
+<meta name="twitter:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1495531569006&di=596ca0c34c885a754c86c55fccd0ac1f&imgtype=0&src=http%3A%2F%2Fimg06.tooopen.com%2Fimages%2F20161212%2Ftooopen_sy_190366895495.jpg">
 
 
 
@@ -128,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://www.wushubing.top/2017/05/23/术/"/>
+  <link rel="canonical" href="http://www.wushubing.top/2017/05/23/使用vue2进行网页重构/"/>
 
 
 
 
 
-  <title> 写在前面 | 大术的博客 </title>
+  <title> 使用vue2进行网页重构 | 大术的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -277,7 +276,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://www.wushubing.top/2017/05/23/术/">
+  <link itemprop="mainEntityOfPage" href="http://www.wushubing.top/2017/05/23/使用vue2进行网页重构/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="大术">
@@ -301,7 +300,7 @@
             
             
               
-                写在前面
+                使用vue2进行网页重构
               
             
           </h2>
@@ -316,7 +315,7 @@
               
                 <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-23T11:42:59+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-23T15:39:32+08:00">
                 2017-05-23
               </time>
             
@@ -335,8 +334,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/05/23/术/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/05/23/术/" itemprop="commentCount"></span>
+                <a href="/2017/05/23/使用vue2进行网页重构/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/05/23/使用vue2进行网页重构/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -368,9 +367,9 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1495531569009&di=7dfefbdadfa16b388888903ea952b707&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F17%2F47%2F78%2F55658PICN8u_1024.jpg" rel="gallery_cj31bkz4m0002y4ionf6doswk"
+                 href="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1495531569006&di=596ca0c34c885a754c86c55fccd0ac1f&imgtype=0&src=http%3A%2F%2Fimg06.tooopen.com%2Fimages%2F20161212%2Ftooopen_sy_190366895495.jpg" rel="gallery_cj31bkz520004y4iofzf9ly6h"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1495531569009&di=7dfefbdadfa16b388888903ea952b707&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F17%2F47%2F78%2F55658PICN8u_1024.jpg" itemprop="contentUrl"/>
+                <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1495531569006&di=596ca0c34c885a754c86c55fccd0ac1f&imgtype=0&src=http%3A%2F%2Fimg06.tooopen.com%2Fimages%2F20161212%2Ftooopen_sy_190366895495.jpg" itemprop="contentUrl"/>
               </a>
             
           
@@ -381,13 +380,25 @@
       
 
       
-        <h3 id="为什么建博客？"><a href="#为什么建博客？" class="headerlink" title="为什么建博客？"></a>为什么建博客？</h3><blockquote>
-<p>两周前加入东方IC，成为了公司上海分部的前端工程师，我很高兴能拿到这份offer，因为这是公司对我自我价值的认同，<br>我希望我能胜任，所以我打算记录下这个过程。</p>
+        <h3 id="网站重构的理由"><a href="#网站重构的理由" class="headerlink" title="网站重构的理由"></a>网站重构的理由</h3><blockquote>
+<p>一个站点随着时间的增加会出现代码冗余逻辑混乱的现象导致维护困难，或者随着前端技术更迭原代码已经不能够实现需求，这种情况下会寻求页面重构。我司主站建站于2005年，在这一行应当算历史悠久了，重构势在必行。</p>
 </blockquote>
-<h3 id="博客主要功能？"><a href="#博客主要功能？" class="headerlink" title="博客主要功能？"></a>博客主要功能？</h3><blockquote>
-<p>我想主要用来记录工作中出现的技术问题，或者个人心得体会。</p>
+<h3 id="技术选型"><a href="#技术选型" class="headerlink" title="技术选型"></a>技术选型</h3><blockquote>
+<p>根据公司业务、网站功能类别来考虑重构的网站架构技术选型，其实我对这些也是一知半解，仅仅知道有这么个东西。我司的重构我们决定使用vue来进行重构，原因很简单，我虽然学习过很多框架，什么angular、react、vue我都有学过，但真正有过实际项目经验的只有vue,而且还是移动端的项目，<br>而这个是pc端的项目，和移动端不太一样，我的技术不成熟是一个方面，另一方面我觉得，从公司业务角度考虑，我司网站主要用来做图片展示，没有太多的交互需求，也不需要考虑什么高并发，页面加载速度什么的，我有时候觉得公司把我招进来是为了把网站做的更fashion一点。。。<br><a id="more"></a></p>
+<h3 id="重构流程"><a href="#重构流程" class="headerlink" title="重构流程"></a>重构流程</h3><ul>
+<li>列出网站主要功能<br>这就是我目前在做的工作，网站重构需要先列出需求，也就是要在后期实现的功能，新增的功能暂且不提，最起码的原始的功能必须复现。</li>
+</ul>
 </blockquote>
-<p>就这样<br>祝好!</p>
+<p>-搭建框架</p>
+<blockquote>
+<p>整理前后端接口（关键任务）</p>
+<ol>
+<li>前端框架搭建（vue技术栈）<ol>
+<li>定义前后端接口（需要弄清楚，每一个页面需要哪些接口）</li>
+</ol>
+</li>
+</ol>
+</blockquote>
 
       
     </div>
@@ -399,12 +410,6 @@
       
     </div>
   
-        <div class="post-tags">
-          
-            <a href="/tags/一切的开始/" rel="tag"># 一切的开始</a>
-          
-        </div>
-      
 
 
     <div>
@@ -442,8 +447,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/05/23/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2017/05/23/术/" rel="next" title="写在前面">
+                <i class="fa fa-chevron-left"></i> 写在前面
               </a>
             
           </div>
@@ -451,10 +456,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/05/23/使用vue2进行网页重构/" rel="prev" title="使用vue2进行网页重构">
-                使用vue2进行网页重构 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -469,10 +470,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2017/05/23/术/"
-     data-title="写在前面"
+        <div class="ds-share flat" data-thread-key="2017/05/23/使用vue2进行网页重构/"
+     data-title="使用vue2进行网页重构"
      data-content=""
-     data-url="http://www.wushubing.top/2017/05/23/术/">
+     data-url="http://www.wushubing.top/2017/05/23/使用vue2进行网页重构/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -502,8 +503,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/05/23/术/"
-           data-title="写在前面" data-url="http://www.wushubing.top/2017/05/23/术/">
+      <div class="ds-thread" data-thread-key="2017/05/23/使用vue2进行网页重构/"
+           data-title="使用vue2进行网页重构" data-url="http://www.wushubing.top/2017/05/23/使用vue2进行网页重构/">
       </div>
     
   </div>
@@ -655,7 +656,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么建博客？"><span class="nav-number">1.</span> <span class="nav-text">为什么建博客？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#博客主要功能？"><span class="nav-number">2.</span> <span class="nav-text">博客主要功能？</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#网站重构的理由"><span class="nav-number">1.</span> <span class="nav-text">网站重构的理由</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#技术选型"><span class="nav-number">2.</span> <span class="nav-text">技术选型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重构流程"><span class="nav-number">3.</span> <span class="nav-text">重构流程</span></a></li></ol></div>
             
 
           </div>
