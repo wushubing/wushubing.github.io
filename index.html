@@ -202,7 +202,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Home
           </a>
         </li>
       
@@ -212,7 +212,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
-            Kategorien
+            Categories
           </a>
         </li>
       
@@ -222,7 +222,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -242,7 +242,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
-            Über
+            About
           </a>
         </li>
       
@@ -265,6 +265,313 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://www.wushubing.top/2017/05/24/API接口文档编写/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="大术">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avstar.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="大术的博客">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="大术的博客" src="/images/avatar.jpg">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/05/24/API接口文档编写/" itemprop="url">
+                  API接口文档编写
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-24T15:33:29+08:00">
+                2017-05-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/05/24/API接口文档编写/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/05/24/API接口文档编写/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+ 
+        
+
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="用户登录"><a href="#用户登录" class="headerlink" title="用户登录"></a><strong>用户登录</strong></h2><p>验证用户名密码</p>
+<h3 id="接口："><a href="#接口：" class="headerlink" title="接口："></a>接口：</h3><p>POST /login</p>
+<h3 id="请求参数："><a href="#请求参数：" class="headerlink" title="请求参数："></a>请求参数：</h3><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>类型</th>
+<th>定义</th>
+<th>必需</th>
+<th>默认值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>username</td>
+<td>string</td>
+<td>用户名</td>
+<td></td>
+<td>“”</td>
+</tr>
+<tr>
+<td>password</td>
+<td>number</td>
+<td>密码</td>
+<td></td>
+<td>“”</td>
+</tr>
+<tr>
+<td>cb</td>
+<td>number</td>
+<td>是否记住密码</td>
+<td></td>
+<td>0</td>
+<td>不记住</td>
+</tr>
+</tbody>
+</table>
+<h3 id="响应："><a href="#响应：" class="headerlink" title="响应："></a>响应：</h3><h3 id="成功：200"><a href="#成功：200" class="headerlink" title="成功：200"></a>成功：200</h3><p>响应格式：JSON</p>
+<pre><code>{
+     $.ajax({
+            type: &quot;POST&quot;,
+            url: &quot;&quot;, //登录事件处理
+            data: {
+                &quot;username&quot;: {string},
+                &quot;password&quot;: {number},
+                &quot;cb&quot;: {number}
+            }
+}
+</code></pre><p>缓存配置：使用<code>ETag</code>进行缓存。</p>
+<h3 id="参数不合法：409"><a href="#参数不合法：409" class="headerlink" title="参数不合法：409"></a>参数不合法：409</h3><p>参考标准409响应</p>
+<hr>
+<h2 id="banner图片"><a href="#banner图片" class="headerlink" title="banner图片"></a><strong>banner图片</strong></h2><p>用于获取图片相关信息</p>
+<h3 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h3><p>GET /bannerimage</p>
+<h3 id="请求参数"><a href="#请求参数" class="headerlink" title="请求参数"></a>请求参数</h3><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>类型</th>
+<th>定义</th>
+<th>必需</th>
+<th>默认值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>src</td>
+<td>string</td>
+<td>查询关键词</td>
+<td></td>
+<td>“#”</td>
+<td>图片链接</td>
+</tr>
+<tr>
+<td>alt</td>
+<td>string</td>
+<td>图片说明</td>
+<td></td>
+<td>“”</td>
+<td>图片说明</td>
+</tr>
+<tr>
+<td>target</td>
+<td>string</td>
+<td>跳转链接</td>
+<td></td>
+<td>“#”</td>
+<td>图片点击跳转</td>
+</tr>
+<tr>
+<td>id</td>
+<td>string</td>
+<td>名称</td>
+<td></td>
+<td>“”</td>
+<td>“id”</td>
+</tr>
+</tbody>
+</table>
+<h3 id="响应：-1"><a href="#响应：-1" class="headerlink" title="响应："></a>响应：</h3><h3 id="成功：200-1"><a href="#成功：200-1" class="headerlink" title="成功：200"></a>成功：200</h3><p>响应格式：JSON</p>
+<pre><code>{
+    data: [
+        {
+            &quot;src&quot;: {string},
+            &quot;alt&quot;: {string},
+            &quot;target&quot;: {string},
+            &quot;id&quot;: {string}
+        },
+        ...
+    ]
+}
+</code></pre><h3 id="参数不合法：404"><a href="#参数不合法：404" class="headerlink" title="参数不合法：404"></a>参数不合法：404</h3><p>参考标准404响应</p>
+<hr>
+<h2 id="分类入口"><a href="#分类入口" class="headerlink" title="分类入口"></a><strong>分类入口</strong></h2><p>各分类页面入口</p>
+<h3 id="接口-1"><a href="#接口-1" class="headerlink" title="接口"></a>接口</h3><p>GET /listimage</p>
+<h3 id="请求参数-1"><a href="#请求参数-1" class="headerlink" title="请求参数"></a>请求参数</h3><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>类型</th>
+<th>定义</th>
+<th>必需</th>
+<th>默认值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>src</td>
+<td>string</td>
+<td>图片路径</td>
+<td></td>
+<td>“#”</td>
+<td>图片链接</td>
+</tr>
+<tr>
+<td>alt</td>
+<td>string</td>
+<td>类别说明</td>
+<td></td>
+<td>“”</td>
+<td>类别说明</td>
+</tr>
+<tr>
+<td>target</td>
+<td>string</td>
+<td>跳转链接</td>
+<td></td>
+<td>“#”</td>
+<td>图片点击跳转</td>
+</tr>
+<tr>
+<td>id</td>
+<td>string</td>
+<td>名称</td>
+<td></td>
+<td>“”</td>
+<td>“id”</td>
+</tr>
+</tbody>
+</table>
+<h3 id="响应：-2"><a href="#响应：-2" class="headerlink" title="响应："></a>响应：</h3><h3 id="成功：200-2"><a href="#成功：200-2" class="headerlink" title="成功：200"></a>成功：200</h3><p>响应格式：JSON</p>
+<pre><code>{
+    data: [
+        {
+            &quot;src&quot;: {string},
+            &quot;alt&quot;: {string},
+            &quot;target&quot;: {string},
+            &quot;id&quot;: {string}
+        },
+        ...
+    ]
+}
+</code></pre><h3 id="参数不合法：404-1"><a href="#参数不合法：404-1" class="headerlink" title="参数不合法：404"></a>参数不合法：404</h3><p>参考标准404响应</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+  
+
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+         
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
     
       
 
@@ -315,7 +622,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-23T15:39:32+08:00">
                 2017-05-23
@@ -369,7 +676,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1495531569006&di=596ca0c34c885a754c86c55fccd0ac1f&imgtype=0&src=http%3A%2F%2Fimg06.tooopen.com%2Fimages%2F20161212%2Ftooopen_sy_190366895495.jpg" rel="gallery_cj31bkz520004y4iofzf9ly6h"
+                 href="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1495531569006&di=596ca0c34c885a754c86c55fccd0ac1f&imgtype=0&src=http%3A%2F%2Fimg06.tooopen.com%2Fimages%2F20161212%2Ftooopen_sy_190366895495.jpg" rel="gallery_cj32os5uo0002tgioim6ysiwv"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1495531569006&di=596ca0c34c885a754c86c55fccd0ac1f&imgtype=0&src=http%3A%2F%2Fimg06.tooopen.com%2Fimages%2F20161212%2Ftooopen_sy_190366895495.jpg" itemprop="contentUrl"/>
               </a>
@@ -391,7 +698,7 @@
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/05/23/使用vue2进行网页重构/#more" rel="contents">
-              Weiterlesen &raquo;
+              Read more &raquo;
             </a>
           </div>
           <!--/noindex-->
@@ -472,7 +779,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-23T11:42:59+08:00">
                 2017-05-23
@@ -526,7 +833,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1495531569009&di=7dfefbdadfa16b388888903ea952b707&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F17%2F47%2F78%2F55658PICN8u_1024.jpg" rel="gallery_cj31bkz4m0002y4ionf6doswk"
+                 href="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1495531569009&di=7dfefbdadfa16b388888903ea952b707&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F17%2F47%2F78%2F55658PICN8u_1024.jpg" rel="gallery_cj32os5uw0006tgiol1t6g4fr"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1495531569009&di=7dfefbdadfa16b388888903ea952b707&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F17%2F47%2F78%2F55658PICN8u_1024.jpg" itemprop="contentUrl"/>
               </a>
@@ -627,7 +934,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-23T10:58:18+08:00">
                 2017-05-23
@@ -762,8 +1069,8 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">3</span>
-                <span class="site-state-item-name">Artikel</span>
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">posts</span>
               </a>
             </div>
           
@@ -774,7 +1081,7 @@
             <div class="site-state-item site-state-tags">
               <a href="/tags">
                 <span class="site-state-item-count">1</span>
-                <span class="site-state-item-name">Tags</span>
+                <span class="site-state-item-name">tags</span>
               </a>
             </div>
           
@@ -881,7 +1188,7 @@
 
 
 <div class="powered-by">
-  Erstellt mit  <a class="theme-link" href="https://hexo.io" rel="external nofollow">Hexo</a>
+  Powered by <a class="theme-link" href="https://hexo.io" rel="external nofollow">Hexo</a>
 </div>
 
 <div class="theme-info">
