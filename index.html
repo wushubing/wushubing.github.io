@@ -364,11 +364,28 @@
 
       
       
+        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+          
+          
+            <div class="post-gallery-row">
+              <a class="post-gallery-img fancybox"
+                 href="https://cdn.pixabay.com/photo/2017/05/23/17/50/mont-maudit-2337935_960_720.jpg" rel="gallery_cj32ozno30000f4iooxv485g0"
+                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+                <img src="https://cdn.pixabay.com/photo/2017/05/23/17/50/mont-maudit-2337935_960_720.jpg" itemprop="contentUrl"/>
+              </a>
+            
+          
+
+          
+          </div>
+        </div>
+      
 
       
         
-          
-            <h2 id="用户登录"><a href="#用户登录" class="headerlink" title="用户登录"></a><strong>用户登录</strong></h2><p>验证用户名密码</p>
+          <h2 id="用户登录"><a href="#用户登录" class="headerlink" title="用户登录"></a><strong>用户登录</strong></h2><blockquote>
+<p>验证用户名密码</p>
+</blockquote>
 <h3 id="接口："><a href="#接口：" class="headerlink" title="接口："></a>接口：</h3><p>POST /login</p>
 <h3 id="请求参数："><a href="#请求参数：" class="headerlink" title="请求参数："></a>请求参数：</h3><table>
 <thead>
@@ -418,133 +435,13 @@
             }
 }
 </code></pre><p>缓存配置：使用<code>ETag</code>进行缓存。</p>
-<h3 id="参数不合法：409"><a href="#参数不合法：409" class="headerlink" title="参数不合法：409"></a>参数不合法：409</h3><p>参考标准409响应</p>
-<hr>
-<h2 id="banner图片"><a href="#banner图片" class="headerlink" title="banner图片"></a><strong>banner图片</strong></h2><p>用于获取图片相关信息</p>
-<h3 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h3><p>GET /bannerimage</p>
-<h3 id="请求参数"><a href="#请求参数" class="headerlink" title="请求参数"></a>请求参数</h3><table>
-<thead>
-<tr>
-<th>名称</th>
-<th>类型</th>
-<th>定义</th>
-<th>必需</th>
-<th>默认值</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>src</td>
-<td>string</td>
-<td>查询关键词</td>
-<td></td>
-<td>“#”</td>
-<td>图片链接</td>
-</tr>
-<tr>
-<td>alt</td>
-<td>string</td>
-<td>图片说明</td>
-<td></td>
-<td>“”</td>
-<td>图片说明</td>
-</tr>
-<tr>
-<td>target</td>
-<td>string</td>
-<td>跳转链接</td>
-<td></td>
-<td>“#”</td>
-<td>图片点击跳转</td>
-</tr>
-<tr>
-<td>id</td>
-<td>string</td>
-<td>名称</td>
-<td></td>
-<td>“”</td>
-<td>“id”</td>
-</tr>
-</tbody>
-</table>
-<h3 id="响应：-1"><a href="#响应：-1" class="headerlink" title="响应："></a>响应：</h3><h3 id="成功：200-1"><a href="#成功：200-1" class="headerlink" title="成功：200"></a>成功：200</h3><p>响应格式：JSON</p>
-<pre><code>{
-    data: [
-        {
-            &quot;src&quot;: {string},
-            &quot;alt&quot;: {string},
-            &quot;target&quot;: {string},
-            &quot;id&quot;: {string}
-        },
-        ...
-    ]
-}
-</code></pre><h3 id="参数不合法：404"><a href="#参数不合法：404" class="headerlink" title="参数不合法：404"></a>参数不合法：404</h3><p>参考标准404响应</p>
-<hr>
-<h2 id="分类入口"><a href="#分类入口" class="headerlink" title="分类入口"></a><strong>分类入口</strong></h2><p>各分类页面入口</p>
-<h3 id="接口-1"><a href="#接口-1" class="headerlink" title="接口"></a>接口</h3><p>GET /listimage</p>
-<h3 id="请求参数-1"><a href="#请求参数-1" class="headerlink" title="请求参数"></a>请求参数</h3><table>
-<thead>
-<tr>
-<th>名称</th>
-<th>类型</th>
-<th>定义</th>
-<th>必需</th>
-<th>默认值</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>src</td>
-<td>string</td>
-<td>图片路径</td>
-<td></td>
-<td>“#”</td>
-<td>图片链接</td>
-</tr>
-<tr>
-<td>alt</td>
-<td>string</td>
-<td>类别说明</td>
-<td></td>
-<td>“”</td>
-<td>类别说明</td>
-</tr>
-<tr>
-<td>target</td>
-<td>string</td>
-<td>跳转链接</td>
-<td></td>
-<td>“#”</td>
-<td>图片点击跳转</td>
-</tr>
-<tr>
-<td>id</td>
-<td>string</td>
-<td>名称</td>
-<td></td>
-<td>“”</td>
-<td>“id”</td>
-</tr>
-</tbody>
-</table>
-<h3 id="响应：-2"><a href="#响应：-2" class="headerlink" title="响应："></a>响应：</h3><h3 id="成功：200-2"><a href="#成功：200-2" class="headerlink" title="成功：200"></a>成功：200</h3><p>响应格式：JSON</p>
-<pre><code>{
-    data: [
-        {
-            &quot;src&quot;: {string},
-            &quot;alt&quot;: {string},
-            &quot;target&quot;: {string},
-            &quot;id&quot;: {string}
-        },
-        ...
-    ]
-}
-</code></pre><h3 id="参数不合法：404-1"><a href="#参数不合法：404-1" class="headerlink" title="参数不合法：404"></a>参数不合法：404</h3><p>参考标准404响应</p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/05/24/API接口文档编写/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -676,7 +573,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1495531569006&di=596ca0c34c885a754c86c55fccd0ac1f&imgtype=0&src=http%3A%2F%2Fimg06.tooopen.com%2Fimages%2F20161212%2Ftooopen_sy_190366895495.jpg" rel="gallery_cj32os5uo0002tgioim6ysiwv"
+                 href="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1495531569006&di=596ca0c34c885a754c86c55fccd0ac1f&imgtype=0&src=http%3A%2F%2Fimg06.tooopen.com%2Fimages%2F20161212%2Ftooopen_sy_190366895495.jpg" rel="gallery_cj32oznoj0002f4io1dzweq8m"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1495531569006&di=596ca0c34c885a754c86c55fccd0ac1f&imgtype=0&src=http%3A%2F%2Fimg06.tooopen.com%2Fimages%2F20161212%2Ftooopen_sy_190366895495.jpg" itemprop="contentUrl"/>
               </a>
@@ -833,7 +730,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1495531569009&di=7dfefbdadfa16b388888903ea952b707&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F17%2F47%2F78%2F55658PICN8u_1024.jpg" rel="gallery_cj32os5uw0006tgiol1t6g4fr"
+                 href="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1495531569009&di=7dfefbdadfa16b388888903ea952b707&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F17%2F47%2F78%2F55658PICN8u_1024.jpg" rel="gallery_cj32oznoj0006f4iopjw20ri5"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1495531569009&di=7dfefbdadfa16b388888903ea952b707&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F17%2F47%2F78%2F55658PICN8u_1024.jpg" itemprop="contentUrl"/>
               </a>
