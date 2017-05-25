@@ -90,14 +90,16 @@
 
 <meta name="description" content="关于vue的相关知识一、为什么学习vue.jsvue.js兼具angular.js和react的优点，并且剔除了他们的缺点 官网：http://cn.vuejs.org/ 手册：http://cn.vuejs.org/v2/api/ 优点：     methods 只有纯粹的数据逻辑，而不是去处理 DOM 事件细节 二、vue.js是什么Vue是一个&amp;quot;MVVM框架（库）&amp;quot;，和a">
 <meta property="og:type" content="article">
-<meta property="og:title" content="大术的博客">
+<meta property="og:title" content="关于vue的相关知识（一）">
 <meta property="og:url" content="http://www.wushubing.top/2017/05/25/关于vue的相关知识/index.html">
 <meta property="og:site_name" content="大术的博客">
 <meta property="og:description" content="关于vue的相关知识一、为什么学习vue.jsvue.js兼具angular.js和react的优点，并且剔除了他们的缺点 官网：http://cn.vuejs.org/ 手册：http://cn.vuejs.org/v2/api/ 优点：     methods 只有纯粹的数据逻辑，而不是去处理 DOM 事件细节 二、vue.js是什么Vue是一个&amp;quot;MVVM框架（库）&amp;quot;，和a">
-<meta property="og:updated_time" content="2017-05-25T09:42:47.838Z">
+<meta property="og:image" content="https://cdn.pixabay.com/photo/2017/05/23/16/42/portugal-2337756_960_720.jpg">
+<meta property="og:updated_time" content="2017-05-25T09:58:22.505Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="大术的博客">
+<meta name="twitter:title" content="关于vue的相关知识（一）">
 <meta name="twitter:description" content="关于vue的相关知识一、为什么学习vue.jsvue.js兼具angular.js和react的优点，并且剔除了他们的缺点 官网：http://cn.vuejs.org/ 手册：http://cn.vuejs.org/v2/api/ 优点：     methods 只有纯粹的数据逻辑，而不是去处理 DOM 事件细节 二、vue.js是什么Vue是一个&amp;quot;MVVM框架（库）&amp;quot;，和a">
+<meta name="twitter:image" content="https://cdn.pixabay.com/photo/2017/05/23/16/42/portugal-2337756_960_720.jpg">
 
 
 
@@ -131,7 +133,7 @@
 
 
 
-  <title>  | 大术的博客 </title>
+  <title> 关于vue的相关知识（一） | 大术的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -298,7 +300,7 @@
             
             
               
-                
+                关于vue的相关知识（一）
               
             
           </h2>
@@ -313,7 +315,7 @@
               
                 <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-25T17:43:05+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-25T17:33:29+08:00">
                 2017-05-25
               </time>
             
@@ -360,6 +362,22 @@
 
       
       
+        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+          
+          
+            <div class="post-gallery-row">
+              <a class="post-gallery-img fancybox"
+                 href="https://cdn.pixabay.com/photo/2017/05/23/16/42/portugal-2337756_960_720.jpg" rel="gallery_cj348yqbo0004xwiofve0os8m"
+                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+                <img src="https://cdn.pixabay.com/photo/2017/05/23/16/42/portugal-2337756_960_720.jpg" itemprop="contentUrl"/>
+              </a>
+            
+          
+
+          
+          </div>
+        </div>
+      
 
       
         <h1 id="关于vue的相关知识"><a href="#关于vue的相关知识" class="headerlink" title="关于vue的相关知识"></a><center>关于vue的相关知识</center></h1><h3 id="一、为什么学习vue-js"><a href="#一、为什么学习vue-js" class="headerlink" title="一、为什么学习vue.js"></a>一、为什么学习vue.js</h3><pre><code>vue.js兼具angular.js和react的优点，并且剔除了他们的缺点
@@ -378,7 +396,9 @@ MVC、MVP和MVVM否是用来解决界面呈现和逻辑代码分离而出现的�
 </code></pre><h3 id="四、MVC"><a href="#四、MVC" class="headerlink" title="四、MVC"></a>四、MVC</h3><pre><code>视图（view）:用户界面
 控制器（controller）：业务逻辑
 模型（Model）:数据处理
-</code></pre><h3 id="五、MVP"><a href="#五、MVP" class="headerlink" title="五、MVP"></a>五、MVP</h3><pre><code>MVP 是从经典的模式MVC演变而来，它们的基本思想有相通的地方：Controller/Presenter负责逻辑的处理，Model提供数据，View负责显示。作为一种新的模式，MVP与MVC有着一个重大的区别：在MVP中View并不直接使用Model，它们之间的通信是通过Presenter (MVC中的Controller)来进行的，所有的交互都发生在Presenter内部，而在MVC中View会从直接Model中读取数据而不是通过 Controller。
+</code></pre><h3 id="五、MVP"><a href="#五、MVP" class="headerlink" title="五、MVP"></a>五、MVP</h3><pre><code>MVP 是从经典的模式MVC演变而来，它们的基本思想有相通的地方：Controller/Presenter负责逻辑的处理，Model提供数据，View负责显示。作为一种新的模式，MVP与MVC有着一个重大的区别：在MVP中View并不直接使用Model，它们之间的通信是通过Presenter
+&lt;!--more--&gt;
+(MVC中的Controller)来进行的，所有的交互都发生在Presenter内部，而在MVC中View会从直接Model中读取数据而不是通过 Controller。
 </code></pre><h3 id="六、MVVM"><a href="#六、MVVM" class="headerlink" title="六、MVVM"></a>六、MVVM</h3><pre><code>MVVM在概念上是真正将页面与数据逻辑分离的模式，在开发方式上，它是真正将前台代码开发者（JS+HTML）与后台代码开发者分离的模式（asp,asp.net,php,jsp）
 双向绑定：view的变动，自动反映在viewModel,反之亦然
 </code></pre><h3 id="七、vue对比其他框架"><a href="#七、vue对比其他框架" class="headerlink" title="七、vue对比其他框架"></a>七、vue对比其他框架</h3><pre><code> 1、vue-angular
@@ -781,7 +801,7 @@ b)实例化vue.js
     <div class="post-spread">
       
         <div class="ds-share flat" data-thread-key="2017/05/25/关于vue的相关知识/"
-     data-title=""
+     data-title="关于vue的相关知识（一）"
      data-content=""
      data-url="http://www.wushubing.top/2017/05/25/关于vue的相关知识/">
   <div class="ds-share-inline">
@@ -806,12 +826,15 @@ b)实例化vue.js
           </div>
           
 
+  <p>热评文章</p>
+  <div class="ds-top-threads" data-range="monthly" data-num-items="4"></div>
+
 
           
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2017/05/25/关于vue的相关知识/"
-           data-title="" data-url="http://www.wushubing.top/2017/05/25/关于vue的相关知识/">
+           data-title="关于vue的相关知识（一）" data-url="http://www.wushubing.top/2017/05/25/关于vue的相关知识/">
       </div>
     
   </div>
