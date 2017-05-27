@@ -88,18 +88,18 @@
 
 
 
-<meta name="description" content="网站重构的理由 一个站点随着时间的增加会出现代码冗余逻辑混乱的现象导致维护困难，或者随着前端技术更迭原代码已经不能够实现需求，这种情况下会寻求页面重构。我司主站建站于2005年，在这一行应当算历史悠久了，重构势在必行。  技术选型 根据公司业务、网站功能类别来考虑重构的网站架构技术选型，其实我对这些也是一知半解，仅仅知道有这么个东西。我司的重构我们决定使用vue来进行重构，原因很简单，我虽然学习过">
+<meta name="description" content="项目结构">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用vue2进行网页重构">
-<meta property="og:url" content="http://www.wushubing.top/2017/05/23/使用vue2进行网页重构/index.html">
+<meta property="og:title" content="vue模块化开发">
+<meta property="og:url" content="http://www.wushubing.top/2017/05/27/vue模块化开发/index.html">
 <meta property="og:site_name" content="大术的博客">
-<meta property="og:description" content="网站重构的理由 一个站点随着时间的增加会出现代码冗余逻辑混乱的现象导致维护困难，或者随着前端技术更迭原代码已经不能够实现需求，这种情况下会寻求页面重构。我司主站建站于2005年，在这一行应当算历史悠久了，重构势在必行。  技术选型 根据公司业务、网站功能类别来考虑重构的网站架构技术选型，其实我对这些也是一知半解，仅仅知道有这么个东西。我司的重构我们决定使用vue来进行重构，原因很简单，我虽然学习过">
-<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1495531569006&di=596ca0c34c885a754c86c55fccd0ac1f&imgtype=0&src=http%3A%2F%2Fimg06.tooopen.com%2Fimages%2F20161212%2Ftooopen_sy_190366895495.jpg">
-<meta property="og:updated_time" content="2017-05-24T07:46:48.708Z">
+<meta property="og:description" content="项目结构">
+<meta property="og:image" content="https://cdn.pixabay.com/photo/2017/02/07/15/52/girl-2046300_960_720.jpg">
+<meta property="og:updated_time" content="2017-05-27T08:41:24.722Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用vue2进行网页重构">
-<meta name="twitter:description" content="网站重构的理由 一个站点随着时间的增加会出现代码冗余逻辑混乱的现象导致维护困难，或者随着前端技术更迭原代码已经不能够实现需求，这种情况下会寻求页面重构。我司主站建站于2005年，在这一行应当算历史悠久了，重构势在必行。  技术选型 根据公司业务、网站功能类别来考虑重构的网站架构技术选型，其实我对这些也是一知半解，仅仅知道有这么个东西。我司的重构我们决定使用vue来进行重构，原因很简单，我虽然学习过">
-<meta name="twitter:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1495531569006&di=596ca0c34c885a754c86c55fccd0ac1f&imgtype=0&src=http%3A%2F%2Fimg06.tooopen.com%2Fimages%2F20161212%2Ftooopen_sy_190366895495.jpg">
+<meta name="twitter:title" content="vue模块化开发">
+<meta name="twitter:description" content="项目结构">
+<meta name="twitter:image" content="https://cdn.pixabay.com/photo/2017/02/07/15/52/girl-2046300_960_720.jpg">
 
 
 
@@ -127,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://www.wushubing.top/2017/05/23/使用vue2进行网页重构/"/>
+  <link rel="canonical" href="http://www.wushubing.top/2017/05/27/vue模块化开发/"/>
 
 
 
 
 
-  <title> 使用vue2进行网页重构 | 大术的博客 </title>
+  <title> vue模块化开发 | 大术的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -276,7 +276,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://www.wushubing.top/2017/05/23/使用vue2进行网页重构/">
+  <link itemprop="mainEntityOfPage" href="http://www.wushubing.top/2017/05/27/vue模块化开发/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="大术">
@@ -300,7 +300,7 @@
             
             
               
-                使用vue2进行网页重构
+                vue模块化开发
               
             
           </h2>
@@ -315,8 +315,8 @@
               
                 <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-23T15:39:32+08:00">
-                2017-05-23
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-27T15:58:47+08:00">
+                2017-05-27
               </time>
             
 
@@ -334,8 +334,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/05/23/使用vue2进行网页重构/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/05/23/使用vue2进行网页重构/" itemprop="commentCount"></span>
+                <a href="/2017/05/27/vue模块化开发/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/05/27/vue模块化开发/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -367,9 +367,9 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1495531569006&di=596ca0c34c885a754c86c55fccd0ac1f&imgtype=0&src=http%3A%2F%2Fimg06.tooopen.com%2Fimages%2F20161212%2Ftooopen_sy_190366895495.jpg" rel="gallery_cj3712gq30006m8iozakc8xgl"
+                 href="https://cdn.pixabay.com/photo/2017/02/07/15/52/girl-2046300_960_720.jpg" rel="gallery_cj3712gpn0000m8ioemtq8nz6"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1495531569006&di=596ca0c34c885a754c86c55fccd0ac1f&imgtype=0&src=http%3A%2F%2Fimg06.tooopen.com%2Fimages%2F20161212%2Ftooopen_sy_190366895495.jpg" itemprop="contentUrl"/>
+                <img src="https://cdn.pixabay.com/photo/2017/02/07/15/52/girl-2046300_960_720.jpg" itemprop="contentUrl"/>
               </a>
             
           
@@ -380,26 +380,25 @@
       
 
       
-        <h3 id="网站重构的理由"><a href="#网站重构的理由" class="headerlink" title="网站重构的理由"></a>网站重构的理由</h3><blockquote>
-<p>一个站点随着时间的增加会出现代码冗余逻辑混乱的现象导致维护困难，或者随着前端技术更迭原代码已经不能够实现需求，这种情况下会寻求页面重构。我司主站建站于2005年，在这一行应当算历史悠久了，重构势在必行。</p>
-</blockquote>
-<h3 id="技术选型"><a href="#技术选型" class="headerlink" title="技术选型"></a>技术选型</h3><blockquote>
-<p>根据公司业务、网站功能类别来考虑重构的网站架构技术选型，其实我对这些也是一知半解，仅仅知道有这么个东西。我司的重构我们决定使用vue来进行重构，原因很简单，我虽然学习过很多框架，什么angular、react、vue我都有学过，但真正有过实际项目经验的只有vue,而且还是移动端的项目，<br>而这个是pc端的项目，和移动端不太一样，我的技术不成熟是一个方面，另一方面我觉得，从公司业务角度考虑，我司网站主要用来做图片展示，没有太多的交互需求，也不需要考虑什么高并发，页面加载速度什么的，我有时候觉得公司把我招进来是为了把网站做的更fashion一点。。。<br><a id="more"></a></p>
-<h3 id="重构流程"><a href="#重构流程" class="headerlink" title="重构流程"></a>重构流程</h3><ul>
-<li>列出网站主要功能<br>这就是我目前在做的工作，网站重构需要先列出需求，也就是要在后期实现的功能，新增的功能暂且不提，最起码的原始的功能必须复现。</li>
-</ul>
-</blockquote>
-<ul>
-<li>搭建框架<blockquote>
-<p>整理前后端接口（关键任务）</p>
-<ol>
-<li>前端框架搭建（vue技术栈）</li>
-<li>定义前后端接口（需要弄清楚，每一个页面需要哪些接口）</li>
-</ol>
-</blockquote>
-</li>
-</ul>
+        <h3 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h3><p><img src="../../public/images/baidu1.png"></p>
+<a id="more"></a>
+<h3 id="单个组件的编写"><a href="#单个组件的编写" class="headerlink" title="单个组件的编写"></a>单个组件的编写</h3><pre><code>&apos; &lt;template&gt;
+&lt;div id=&quot;newsmainr&quot;&gt;
 
+&lt;/div&gt;
+</code></pre><p></p>
+<script>      //这是es6的写法
+    export default {
+        name:'newsmainr',     //关键
+
+    }
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+
+<p></style> ‘<p></p>
+<h3 id="组件的定义与注册"><a href="#组件的定义与注册" class="headerlink" title="组件的定义与注册"></a>组件的定义与注册</h3>
       
     </div>
 
@@ -442,8 +441,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/05/23/术/" rel="next" title="写在前面">
-                <i class="fa fa-chevron-left"></i> 写在前面
+              <a href="/2017/05/25/关于vue的相关知识/" rel="next" title="关于vue的相关知识（一）">
+                <i class="fa fa-chevron-left"></i> 关于vue的相关知识（一）
               </a>
             
           </div>
@@ -451,10 +450,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/05/24/API接口文档编写/" rel="prev" title="API接口文档编写">
-                API接口文档编写 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -469,10 +464,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2017/05/23/使用vue2进行网页重构/"
-     data-title="使用vue2进行网页重构"
+        <div class="ds-share flat" data-thread-key="2017/05/27/vue模块化开发/"
+     data-title="vue模块化开发"
      data-content=""
-     data-url="http://www.wushubing.top/2017/05/23/使用vue2进行网页重构/">
+     data-url="http://www.wushubing.top/2017/05/27/vue模块化开发/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -502,8 +497,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/05/23/使用vue2进行网页重构/"
-           data-title="使用vue2进行网页重构" data-url="http://www.wushubing.top/2017/05/23/使用vue2进行网页重构/">
+      <div class="ds-thread" data-thread-key="2017/05/27/vue模块化开发/"
+           data-title="vue模块化开发" data-url="http://www.wushubing.top/2017/05/27/vue模块化开发/">
       </div>
     
   </div>
@@ -655,7 +650,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#网站重构的理由"><span class="nav-number">1.</span> <span class="nav-text">网站重构的理由</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#技术选型"><span class="nav-number">2.</span> <span class="nav-text">技术选型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重构流程"><span class="nav-number">3.</span> <span class="nav-text">重构流程</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#项目结构"><span class="nav-number">1.</span> <span class="nav-text">项目结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#单个组件的编写"><span class="nav-number">2.</span> <span class="nav-text">单个组件的编写</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#组件的定义与注册"><span class="nav-number">3.</span> <span class="nav-text">组件的定义与注册</span></a></li></ol></div>
             
 
           </div>
